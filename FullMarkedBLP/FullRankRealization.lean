@@ -5,7 +5,7 @@ namespace FullMarkedBLP
 
 /-- The manuscript's full same-domain semantic certificate: all row/mark
 conditions and Sat, together with every complete finite linedness witness
-between the fixed first-triple endpoints. Existence from I2 is separate. -/
+between the fixed first-triple endpoints. RankI2Root constructs its root witness. -/
 structure RankFullMarkedRealization {lambda : Ordinal.{u}} (a : Pattern)
     (theta : Nat → OrdinalDomain lambda) (embedding : Nat → RankElementaryEmbedding lambda) : Prop where
   rows : RankMarkedRealization a theta embedding

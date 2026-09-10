@@ -19,5 +19,5 @@ example (i2 : RankI2.{u}) :
   rankI2_full_marked_blp_natural_cutoff_wellorder i2
 
 #print axioms FullMarkedBLP.rankI2_full_marked_blp_natural_cutoff_wellorder
-#print axioms FullMarkedBLP.rankI2_full_root
+#print axioms FullMarkedBLP.exists_full_root_of_rankI2
 #print axioms FullMarkedBLP.step_shortKey_lt

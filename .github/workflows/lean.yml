@@ -15,6 +15,11 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+      - name: Reject proof gaps and project axioms
+        run: |
+          if git grep -n -E '\b(sorry|admit|unsafe|native_decide)\b|^[[:space:]]*(axiom|constant)[[:space:]]' -- '*.lean'; then
+            exit 1
+          fi
       - uses: leanprover/lean-action@v1
         with:
           auto-config: false

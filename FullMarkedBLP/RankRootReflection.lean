@@ -53,7 +53,7 @@ theorem rankApplicationRootReflection_of_sigmaOne {lambda : Ordinal.{u}} (hl : O
 
 /-- Construct the infinite coherent sequence by recursive choices, keeping
 the base-power invariant at every stage. -/
-theorem rankCoherentRoots_of_reflection {lambda : Ordinal.{u}} (hl : Order.IsSuccLimit lambda)
+theorem exists_rankCoherentRoots_of_reflection {lambda : Ordinal.{u}} (hl : Order.IsSuccLimit lambda)
     {base : RankElementaryEmbedding lambda} {critical : OrdinalDomain lambda}
     (cp : RankCriticalPoint base critical) (reflection : RankApplicationRootReflection hl base) :
     ∃ roots : RankCoherentRoots hl, roots.embedding 0 = base := by
@@ -82,12 +82,12 @@ theorem rankCoherentRoots_of_reflection {lambda : Ordinal.{u}} (hl : Order.IsSuc
     coherent := fun n => Classical.choose_spec (extend n (stages n)) }
   exact ⟨roots, rfl⟩
 
-theorem rankCoherentRoots_of_sigmaTwo_and_definability {lambda : Ordinal.{u}} (hl : Order.IsSuccLimit lambda)
+theorem exists_rankCoherentRoots_of_sigmaTwo_and_definability {lambda : Ordinal.{u}} (hl : Order.IsSuccLimit lambda)
     {base : RankElementaryEmbedding lambda} {critical : OrdinalDomain lambda}
     (cp : RankCriticalPoint base critical) (elementary : RankSigmaTwoElementary base)
     (definable : ∀ n, RankSigmaOneClassDefinable (RankRootExists hl n)) :
     ∃ roots : RankCoherentRoots hl, roots.embedding 0 = base :=
-  rankCoherentRoots_of_reflection hl cp
+  exists_rankCoherentRoots_of_reflection hl cp
     (rankApplicationRootReflection_of_sigmaOne hl (rankSigmaTwoElementary_sigmaOne elementary) definable)
 
 end FullMarkedBLP

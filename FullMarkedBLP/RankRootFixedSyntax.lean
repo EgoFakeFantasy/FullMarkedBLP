@@ -48,12 +48,12 @@ theorem rankApplicationRootReflection_of_lowRank_definability {lambda : Ordinal.
     (rankSigmaOne_reflect_lowRank hl cp elementary (definable n) (rankEmbeddingClassGraph current)).mp imageRoot
   exact ⟨next, nextCritical, nextCp, (rankEmbeddingClassGraph_injective hl equation).symm⟩
 
-theorem rankCoherentRoots_of_sigmaTwo_and_lowRank_definability {lambda : Ordinal.{u}}
+theorem exists_rankCoherentRoots_of_sigmaTwo_and_lowRank_definability {lambda : Ordinal.{u}}
     (hl : Order.IsSuccLimit lambda) {base : RankElementaryEmbedding lambda} {critical : OrdinalDomain lambda}
     (cp : RankCriticalPoint base critical) (elementary : RankSigmaTwoElementary base)
     (definable : ∀ n, RankSigmaOneClassLowRankDefinable (RankRootExists hl n)) :
     ∃ roots : RankCoherentRoots hl, roots.embedding 0 = base :=
-  rankCoherentRoots_of_reflection hl cp
+  exists_rankCoherentRoots_of_reflection hl cp
     (rankApplicationRootReflection_of_lowRank_definability hl cp
       (rankSigmaTwoElementary_sigmaOne elementary) definable)
 

@@ -91,9 +91,9 @@ the current embedding witnesses the image statement; Sigma-one elementarity
 reflects it to a new root. A dependent recursion then constructs the infinite
 coherent sequence while preserving its base-power invariant.
 
-The general rankCoherentRoots_of_sigmaTwo_and_lowRank_definability theorem
+The general exists_rankCoherentRoots_of_sigmaTwo_and_lowRank_definability theorem
 retains an expressibility argument. RankI2Root supplies it using the actual
-finite formula, so rankCoherentRoots_of_sigmaTwo has no expressibility premise.
+finite formula, so exists_rankCoherentRoots_of_sigmaTwo has no expressibility premise.
 
 RankSyntaxData now constructs injective natural formula codes and the six
 actual constructor tables. Every table has rank at most omega, so genuine
@@ -147,7 +147,7 @@ rankRootExists_sigmaOne are proved on ALL class inputs. No class is accepted
 as an embedding merely by naming an arbitrary predicate elementary.
 
 RankI2Root combines this formula with fixed-parameter reflection and the
-coherent-root recursion. rankI2_full_root constructs the complete unchanged
+coherent-root recursion. exists_full_root_of_rankI2 constructs the complete unchanged
 standard-root realization, including every common-endpoint finite witness.
 rankI2_generatedStep_wellFounded then proves manuscript Theorem 4.1 on the
 exact generated domain using actual same-domain Steel well-foundedness.

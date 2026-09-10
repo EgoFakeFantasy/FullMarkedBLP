@@ -4,7 +4,7 @@ namespace FullMarkedBLP
 
 /-- The literal full scan of a realized Sat short copy succeeds and has a
 saturated marked row realization. This includes all natural-cutoff mark
-certificates; first-triple linedness remains a separate obligation. -/
+certificates; FullRankRealization also transports first-triple linedness. -/
 theorem shortCopy_fullScan_total_realized {lambda : Ordinal.{u}} (hl : Order.IsSuccLimit lambda)
     {parent copied : Pattern} {initialTheta : Nat → OrdinalDomain lambda}
     {initialEmbedding : Nat → RankElementaryEmbedding lambda}

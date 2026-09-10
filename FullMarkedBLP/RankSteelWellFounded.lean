@@ -38,9 +38,9 @@ theorem rankFullMarkedRealization_accessible_actual {lambda : Ordinal.{u}}
     Acc (fun child parent => Step parent child) a :=
   rankFullMarkedRealization_accessible hl (rankTerminalDescent_wellFounded_actual hl) realization
 
-/-- Only the full root realization remains as an input to expansion
-well-foundedness. Deriving that realization from I2 is a separate obligation;
-this theorem does not assert the final short-key comparison well-order. -/
+/-- A full root realization gives expansion well-foundedness. RankI2Root
+constructs this input from RankI2, and ShortKeyWellOrder supplies the
+comparison and injectivity conclusions. -/
 theorem generatedStep_wellFounded_of_root {lambda : Ordinal.{u}}
     (hl : Order.IsSuccLimit lambda)
     {rootTheta : Nat → OrdinalDomain lambda} {rootEmbedding : Nat → RankElementaryEmbedding lambda}

@@ -21,3 +21,15 @@ BLP 使用 Mathlib 的宿主数学对象；有限公式也是宿主中的数据�
 - 公开语义接口保留说明结论与真实前提的 docstring。不可通过压缩变量名、
   删除解释或堆叠不透明 tactic 来制造减行。
 - 每次按完整接口更新名称、调用点与文档，验证后不保留旧名兼容别名。
+
+## 本轮存在定理迁移
+
+| 原名 | 当前名称 |
+|---|---|
+| `rankCoherentRoots_of_reflection` | `exists_rankCoherentRoots_of_reflection` |
+| `rankCoherentRoots_of_sigmaTwo_and_definability` | `exists_rankCoherentRoots_of_sigmaTwo_and_definability` |
+| `rankCoherentRoots_of_sigmaTwo_and_lowRank_definability` | `exists_rankCoherentRoots_of_sigmaTwo_and_lowRank_definability` |
+| `rankCoherentRoots_of_sigmaTwo` | `exists_rankCoherentRoots_of_sigmaTwo` |
+| `rankI2_full_root` | `exists_full_root_of_rankI2` |
+
+其他清楚的领域名称和局部数学符号保留；主定理名称保持稳定。

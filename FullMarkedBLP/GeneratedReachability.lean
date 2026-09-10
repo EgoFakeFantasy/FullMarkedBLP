@@ -28,7 +28,7 @@ theorem prefix_cut_reachable {a b : Pattern} (initialSegment : b <+: a) (size : 
 
 theorem rankI2_generated_valid_sat (i2 : RankI2.{u}) {a : Pattern} (generated : Generated a) :
     (∀ r row, rowAt a r = some row → row.CoreValid r) ∧ Sat a := by
-  obtain ⟨lambda, hl, theta, embedding, root⟩ := rankI2_full_root i2
+  obtain ⟨lambda, hl, theta, embedding, root⟩ := exists_full_root_of_rankI2 i2
   obtain ⟨newTheta, newEmbedding, realized, _, _⟩ := rankFullMarkedRealization_generated hl root generated
   exact ⟨realized.rows.valid, realized.rows.sat⟩
 
