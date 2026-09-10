@@ -1,5 +1,4 @@
 import FullMarkedBLP.CompletionMinimum
-import FullMarkedBLP.CompletionSourceBounds
 
 namespace FullMarkedBLP
 

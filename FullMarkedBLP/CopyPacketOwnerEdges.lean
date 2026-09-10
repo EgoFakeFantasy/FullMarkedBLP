@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyFrozenFullTraces
-import FullMarkedBLP.ScanGeneralOwnerEdges
 
 namespace FullMarkedBLP
 

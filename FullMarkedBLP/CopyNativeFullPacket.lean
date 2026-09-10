@@ -1,6 +1,4 @@
 import FullMarkedBLP.CopyOwnerEndpointBoundary
-import FullMarkedBLP.FrozenEligibility
-import FullMarkedBLP.NativeBirthExactPacket
 
 namespace FullMarkedBLP
 

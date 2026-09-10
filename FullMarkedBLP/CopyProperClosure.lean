@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyProper
-import FullMarkedBLP.NativeProperClosure
 
 namespace FullMarkedBLP
 

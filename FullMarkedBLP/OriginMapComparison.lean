@@ -1,5 +1,4 @@
 import FullMarkedBLP.EndpointRecordPropagation
-import FullMarkedBLP.ScanCurrentMarkOrigins
 
 namespace FullMarkedBLP
 

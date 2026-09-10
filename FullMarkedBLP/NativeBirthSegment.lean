@@ -1,7 +1,5 @@
 import FullMarkedBLP.NativeEntranceAboveRecord
 import FullMarkedBLP.NativePathEntry
-import FullMarkedBLP.ScanRecordedTargetB
-import FullMarkedBLP.NativeBottomSat
 
 namespace FullMarkedBLP
 

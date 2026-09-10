@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyMarks
-import FullMarkedBLP.MarkTrace
 
 namespace FullMarkedBLP
 

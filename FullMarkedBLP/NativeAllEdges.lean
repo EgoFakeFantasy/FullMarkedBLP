@@ -1,5 +1,4 @@
 import FullMarkedBLP.NativeReplacementEdges
-import FullMarkedBLP.NativeAllCritical
 
 namespace FullMarkedBLP
 

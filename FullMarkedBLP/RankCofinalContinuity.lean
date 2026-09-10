@@ -1,6 +1,4 @@
 import FullMarkedBLP.RankOrdinalCofinalGraph
-import FullMarkedBLP.RankPairPreservation
-import FullMarkedBLP.OrdinalAction
 
 namespace FullMarkedBLP
 

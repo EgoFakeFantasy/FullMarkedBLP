@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyProperClosure
-import FullMarkedBLP.TraceTransport
 
 namespace FullMarkedBLP
 

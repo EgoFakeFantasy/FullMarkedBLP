@@ -1,5 +1,4 @@
 import FullMarkedBLP.CompletionHighColumns
-import FullMarkedBLP.NativeBottomBound
 
 namespace FullMarkedBLP
 

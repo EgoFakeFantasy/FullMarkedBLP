@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyPacketOwnerEdges
-import FullMarkedBLP.CompletionHighColumns
 
 namespace FullMarkedBLP
 

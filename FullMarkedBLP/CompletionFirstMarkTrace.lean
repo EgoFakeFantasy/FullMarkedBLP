@@ -1,5 +1,4 @@
 import FullMarkedBLP.CompletionFirstTrace
-import FullMarkedBLP.CompletionSemanticMarks
 
 namespace FullMarkedBLP
 

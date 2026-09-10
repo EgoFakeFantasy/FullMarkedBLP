@@ -1,5 +1,4 @@
 import FullMarkedBLP.RankFunctionSpace
-import FullMarkedBLP.OrdinalAction
 
 namespace FullMarkedBLP
 open FirstOrder Language

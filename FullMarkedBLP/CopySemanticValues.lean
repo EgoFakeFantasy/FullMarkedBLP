@@ -1,6 +1,4 @@
 import FullMarkedBLP.RankApplicationCritical
-import FullMarkedBLP.RankMarkedRealization
-import FullMarkedBLP.CopyIndex
 
 namespace FullMarkedBLP
 

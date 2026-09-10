@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyPredecessor
-import FullMarkedBLP.PacketChains
 
 namespace FullMarkedBLP
 

@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyCompletionFullTraces
-import FullMarkedBLP.FrozenRecordDecision
 
 namespace FullMarkedBLP
 

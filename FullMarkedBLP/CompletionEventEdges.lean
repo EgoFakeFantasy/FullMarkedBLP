@@ -1,7 +1,5 @@
 import FullMarkedBLP.FrozenHistoricalTrace
 import FullMarkedBLP.CompletionAllRealizedEdges
-import FullMarkedBLP.NativeTopMarks
-import FullMarkedBLP.CompletionTargetBound
 
 namespace FullMarkedBLP
 

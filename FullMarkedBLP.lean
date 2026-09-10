@@ -23,7 +23,6 @@ import FullMarkedBLP.MarkFactorOrigin
 import FullMarkedBLP.FrozenFactorRecords
 import FullMarkedBLP.NativeNoJumpEntry
 import FullMarkedBLP.NoJumpEndpointObstruction
-import FullMarkedBLP.RecordedBirthBExact
 import FullMarkedBLP.BirthBOriginalInterval
 import FullMarkedBLP.MStarRankRealization
 import FullMarkedBLP.ShortKeyWellOrder

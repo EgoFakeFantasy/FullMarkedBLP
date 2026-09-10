@@ -1,7 +1,5 @@
 import FullMarkedBLP.CompletionFirstTrace
 import FullMarkedBLP.MarkEndpointRecordPropagation
-import FullMarkedBLP.RecordedWordDecomposition
-import FullMarkedBLP.PacketAllEndpoints
 
 namespace FullMarkedBLP
 

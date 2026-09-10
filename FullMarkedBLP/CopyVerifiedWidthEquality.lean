@@ -1,6 +1,4 @@
 import FullMarkedBLP.CopyCompletionHeadPacket
-import FullMarkedBLP.VerifiedCompletionWidth
-import FullMarkedBLP.FrozenRecordDecision
 
 namespace FullMarkedBLP
 

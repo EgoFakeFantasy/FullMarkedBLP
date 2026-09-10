@@ -1,4 +1,3 @@
-import FullMarkedBLP.RankSequenceGraph
 import FullMarkedBLP.RankGraphOrder
 
 namespace FullMarkedBLP

@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyRankRealization
-import FullMarkedBLP.ExpansionSat
 
 namespace FullMarkedBLP
 

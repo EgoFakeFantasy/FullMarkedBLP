@@ -1,4 +1,3 @@
-import FullMarkedBLP.ScanRecordOrigin
 import FullMarkedBLP.ScanPrefix
 
 namespace FullMarkedBLP

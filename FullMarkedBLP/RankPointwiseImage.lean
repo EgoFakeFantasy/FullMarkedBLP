@@ -1,5 +1,4 @@
 import FullMarkedBLP.RankSequenceGraph
-import FullMarkedBLP.RankBijectionCardinal
 
 namespace FullMarkedBLP
 

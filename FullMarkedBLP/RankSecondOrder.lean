@@ -1,5 +1,4 @@
 import FullMarkedBLP.RankClassImage
-import FullMarkedBLP.RankCriticalPoint
 
 namespace FullMarkedBLP
 universe u

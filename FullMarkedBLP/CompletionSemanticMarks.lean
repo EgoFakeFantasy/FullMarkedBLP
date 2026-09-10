@@ -1,4 +1,3 @@
-import FullMarkedBLP.CompletionPacketGeometry
 import FullMarkedBLP.CompletionSemanticIntervals
 import FullMarkedBLP.CompletionMinimum
 

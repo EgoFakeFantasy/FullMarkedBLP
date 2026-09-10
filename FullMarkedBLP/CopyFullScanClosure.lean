@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyScanRealization
-import FullMarkedBLP.ScanTotal
 
 namespace FullMarkedBLP
 

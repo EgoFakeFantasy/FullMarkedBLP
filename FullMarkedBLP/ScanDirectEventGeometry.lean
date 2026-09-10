@@ -1,6 +1,5 @@
 import FullMarkedBLP.ScanDirectOwnerPacket
 import FullMarkedBLP.ScanCurrentRecordGap
-import FullMarkedBLP.FrozenHistoricalTrace
 import FullMarkedBLP.CompletionEventEdges
 
 namespace FullMarkedBLP

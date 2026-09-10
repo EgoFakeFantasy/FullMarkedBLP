@@ -1,5 +1,4 @@
 import FullMarkedBLP.CompletionEventEdges
-import FullMarkedBLP.CompletionSat
 
 namespace FullMarkedBLP
 

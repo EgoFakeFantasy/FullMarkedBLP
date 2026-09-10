@@ -1,6 +1,5 @@
 import FullMarkedBLP.CopySemanticEdges
 import FullMarkedBLP.CopyDecomposition
-import FullMarkedBLP.NativePrefixEdges
 
 namespace FullMarkedBLP
 

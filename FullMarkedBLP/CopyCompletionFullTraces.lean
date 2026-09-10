@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyRecordedFullPacket
-import FullMarkedBLP.CopyCompletionHeadPacket
 
 namespace FullMarkedBLP
 

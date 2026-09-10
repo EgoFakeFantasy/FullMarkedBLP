@@ -1,5 +1,4 @@
 import FullMarkedBLP.RankApplication
-import FullMarkedBLP.RankCriticalPoint
 
 namespace FullMarkedBLP
 open FirstOrder Language

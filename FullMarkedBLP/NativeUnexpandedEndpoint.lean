@@ -1,4 +1,3 @@
-import FullMarkedBLP.NativeTraceShift
 import FullMarkedBLP.NativeSatClosure
 
 namespace FullMarkedBLP

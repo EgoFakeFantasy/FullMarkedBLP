@@ -1,5 +1,4 @@
 import FullMarkedBLP.ScanStepUnexpandedEndpoint
-import FullMarkedBLP.ScanOriginAlignment
 
 namespace FullMarkedBLP
 

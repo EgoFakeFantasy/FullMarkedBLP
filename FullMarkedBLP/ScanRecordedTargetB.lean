@@ -1,5 +1,4 @@
 import FullMarkedBLP.NativeOutputTargetB
-import FullMarkedBLP.ScanPrefix
 
 namespace FullMarkedBLP
 

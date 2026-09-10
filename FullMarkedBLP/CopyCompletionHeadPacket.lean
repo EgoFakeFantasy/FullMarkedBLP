@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyTraceThroughHead
-import FullMarkedBLP.CompletionFactorRecords
 
 namespace FullMarkedBLP
 

@@ -1,5 +1,4 @@
 import FullMarkedBLP.FrozenHistoricalTrace
-import FullMarkedBLP.CompletionSemanticCore
 
 namespace FullMarkedBLP
 

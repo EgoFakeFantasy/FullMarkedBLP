@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyWordCertificates
-import FullMarkedBLP.CopyRowTraces
 
 namespace FullMarkedBLP
 

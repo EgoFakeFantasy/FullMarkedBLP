@@ -1,6 +1,5 @@
 import FullMarkedBLP.CompletionSemanticMarks
 import FullMarkedBLP.ScanRecordedPredecessorPrior
-import FullMarkedBLP.NativeWalkUnique
 
 namespace FullMarkedBLP
 

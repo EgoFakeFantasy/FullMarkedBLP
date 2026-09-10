@@ -1,6 +1,5 @@
 import FullMarkedBLP.CopyWordCertificates
 import FullMarkedBLP.CopyHighWord
-import FullMarkedBLP.CopyRecordRegion
 import FullMarkedBLP.MarkTraceIdentification
 
 namespace FullMarkedBLP

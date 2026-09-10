@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyRecordedInitialPacket
-import FullMarkedBLP.CopyTraceSat
 
 namespace FullMarkedBLP
 

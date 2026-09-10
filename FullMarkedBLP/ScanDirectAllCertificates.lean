@@ -1,6 +1,5 @@
 import FullMarkedBLP.ScanDirectEventGeometry
 import FullMarkedBLP.ScanDirectNewCertificate
-import FullMarkedBLP.CompletionRowClosure
 
 namespace FullMarkedBLP
 

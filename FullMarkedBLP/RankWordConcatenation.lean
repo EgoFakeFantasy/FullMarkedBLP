@@ -1,4 +1,3 @@
-import FullMarkedBLP.RankWordEmbedding
 import FullMarkedBLP.RankCertificateReindex
 
 namespace FullMarkedBLP

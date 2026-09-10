@@ -1,6 +1,4 @@
 import FullMarkedBLP.CopyFrozenEventGeometry
-import FullMarkedBLP.ScanFrozenWidthCutoff
-import FullMarkedBLP.CompletionSemanticMarks
 
 namespace FullMarkedBLP
 

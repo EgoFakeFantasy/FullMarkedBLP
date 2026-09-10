@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyTraceClosure
-import FullMarkedBLP.Sat
 
 namespace FullMarkedBLP
 

@@ -1,6 +1,4 @@
 import FullMarkedBLP.CopyFrozenAllCertificates
-import FullMarkedBLP.CompletionEventEdges
-import FullMarkedBLP.CompletionEventRealization
 
 namespace FullMarkedBLP
 

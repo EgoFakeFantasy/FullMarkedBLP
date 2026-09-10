@@ -1,7 +1,6 @@
 import FullMarkedBLP.CopySemanticRows
 import FullMarkedBLP.CopySemanticColumns
 import FullMarkedBLP.RankTraceGeometry
-import FullMarkedBLP.CopyGuard
 
 namespace FullMarkedBLP
 

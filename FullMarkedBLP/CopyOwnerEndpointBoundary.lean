@@ -1,7 +1,4 @@
 import FullMarkedBLP.CopyBBoundaries
-import FullMarkedBLP.CopyPrefixValues
-import FullMarkedBLP.CopyInternalSat
-import FullMarkedBLP.OriginMapComparison
 
 namespace FullMarkedBLP
 

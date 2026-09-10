@@ -1,4 +1,3 @@
-import FullMarkedBLP.DirectPacket
 import FullMarkedBLP.FrozenSourceBounds
 
 namespace FullMarkedBLP

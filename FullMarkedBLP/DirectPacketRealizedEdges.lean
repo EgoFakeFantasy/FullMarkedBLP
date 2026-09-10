@@ -1,5 +1,4 @@
 import FullMarkedBLP.WordPacketEdgeTransfer
-import FullMarkedBLP.DirectPacketBounds
 
 namespace FullMarkedBLP
 

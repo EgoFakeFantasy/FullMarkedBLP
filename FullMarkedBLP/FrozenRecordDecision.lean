@@ -1,5 +1,4 @@
 import FullMarkedBLP.FrozenGuardInvariant
-import FullMarkedBLP.CopyRecordRegion
 import FullMarkedBLP.FrozenPredecessorGeometry
 
 namespace FullMarkedBLP

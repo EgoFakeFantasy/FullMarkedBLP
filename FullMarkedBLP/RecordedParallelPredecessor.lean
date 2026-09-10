@@ -1,6 +1,5 @@
 import FullMarkedBLP.OrderedRecordBirth
 import FullMarkedBLP.NativeTargetParallelEdge
-import FullMarkedBLP.NativeTraceActual
 
 namespace FullMarkedBLP
 

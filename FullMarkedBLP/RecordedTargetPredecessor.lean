@@ -1,6 +1,5 @@
 import FullMarkedBLP.NativeWalkUnique
 import FullMarkedBLP.ScanRecordedPredecessorPrior
-import FullMarkedBLP.CompletionRowClosure
 
 namespace FullMarkedBLP
 

@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyFrozenNewCertificate
-import FullMarkedBLP.CompletionRowClosure
 
 namespace FullMarkedBLP
 

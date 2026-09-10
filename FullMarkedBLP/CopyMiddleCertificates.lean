@@ -3,7 +3,6 @@ import FullMarkedBLP.CopyMiddleNaturalData
 import FullMarkedBLP.CopyGuardCutoff
 import FullMarkedBLP.RankNaturalCutoffCardinal
 import FullMarkedBLP.RankMiddleSplice
-import FullMarkedBLP.CopyRowTraces
 import FullMarkedBLP.MarkTraceIdentification
 
 namespace FullMarkedBLP

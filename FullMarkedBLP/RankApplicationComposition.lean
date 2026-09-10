@@ -1,5 +1,4 @@
 import FullMarkedBLP.RankApplication
-import FullMarkedBLP.RankWordEmbedding
 
 namespace FullMarkedBLP
 open FirstOrder Language

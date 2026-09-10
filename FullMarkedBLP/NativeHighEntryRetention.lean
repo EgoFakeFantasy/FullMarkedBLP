@@ -1,5 +1,4 @@
 import FullMarkedBLP.NativeBlockEndpoint
-import FullMarkedBLP.NativeLowerTrace
 
 namespace FullMarkedBLP
 

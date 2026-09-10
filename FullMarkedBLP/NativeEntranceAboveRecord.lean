@@ -1,5 +1,4 @@
 import FullMarkedBLP.FrozenPreservesEndpoint
-import FullMarkedBLP.ScanCurrentRecordGap
 
 namespace FullMarkedBLP
 

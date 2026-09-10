@@ -1,7 +1,5 @@
 import FullMarkedBLP.RecordedWordWidthBound
 import FullMarkedBLP.ScanGeneralOwnerEdges
-import FullMarkedBLP.NativeWalkUnique
-import FullMarkedBLP.CompletionRowClosure
 
 namespace FullMarkedBLP
 

@@ -1,7 +1,4 @@
 import FullMarkedBLP.CopyParallelThroughHead
-import FullMarkedBLP.FirstParallelTrace
-import FullMarkedBLP.CompletionRowClosure
-import FullMarkedBLP.NativeWalkUnique
 import FullMarkedBLP.RecordUnique
 
 namespace FullMarkedBLP

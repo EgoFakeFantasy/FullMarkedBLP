@@ -1,6 +1,4 @@
 import FullMarkedBLP.CompletionAtEndpoint
-import FullMarkedBLP.ScanRecords
-import FullMarkedBLP.ScanRecordOrigin
 
 namespace FullMarkedBLP
 

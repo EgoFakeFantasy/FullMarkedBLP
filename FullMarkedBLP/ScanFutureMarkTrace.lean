@@ -1,6 +1,4 @@
-import FullMarkedBLP.NativeTraceShift
 import FullMarkedBLP.ScanPrefix
-import FullMarkedBLP.CompletionTrace
 
 namespace FullMarkedBLP
 

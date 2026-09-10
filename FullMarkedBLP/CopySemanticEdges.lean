@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopySemanticValues
-import FullMarkedBLP.CopyPredecessor
 
 namespace FullMarkedBLP
 

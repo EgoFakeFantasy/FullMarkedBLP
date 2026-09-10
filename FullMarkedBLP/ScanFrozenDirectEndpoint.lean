@@ -1,6 +1,5 @@
 import FullMarkedBLP.ScanDirectEndpointAgreement
 import FullMarkedBLP.FrozenHistoricalTrace
-import FullMarkedBLP.MarkTraceIdentification
 
 namespace FullMarkedBLP
 

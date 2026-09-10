@@ -1,5 +1,4 @@
 import FullMarkedBLP.FrozenPredecessorGeometry
-import FullMarkedBLP.CompletionSemanticMarks
 
 namespace FullMarkedBLP
 

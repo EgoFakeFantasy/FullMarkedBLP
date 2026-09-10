@@ -1,5 +1,4 @@
 import FullMarkedBLP.RankSubsetPreservation
-import FullMarkedBLP.FunctionGraphConstruction
 
 namespace FullMarkedBLP
 

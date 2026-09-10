@@ -1,4 +1,3 @@
-import FullMarkedBLP.RankCutoffBounds
 import FullMarkedBLP.RankWordEmbedding
 
 namespace FullMarkedBLP

@@ -1,5 +1,4 @@
 import FullMarkedBLP.RankI2Root
-import FullMarkedBLP.ScanSatPrefix
 
 namespace FullMarkedBLP
 

@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyVerifiedWidthEquality
-import FullMarkedBLP.ScanBTransport
 
 namespace FullMarkedBLP
 

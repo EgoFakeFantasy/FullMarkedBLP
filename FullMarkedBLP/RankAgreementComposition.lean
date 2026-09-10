@@ -1,6 +1,5 @@
 import FullMarkedBLP.RankIntersectionPreservation
 import FullMarkedBLP.RankHierarchyImage
-import FullMarkedBLP.RankAgreementEdges
 
 namespace FullMarkedBLP
 

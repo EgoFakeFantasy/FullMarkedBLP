@@ -1,5 +1,4 @@
 import FullMarkedBLP.RankCardinalPreservation
-import FullMarkedBLP.NativeSat
 
 namespace FullMarkedBLP
 

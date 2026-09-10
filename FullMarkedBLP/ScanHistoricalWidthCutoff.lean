@@ -1,7 +1,6 @@
 import FullMarkedBLP.ScanCurrentMarkOrigins
 import FullMarkedBLP.ScanOriginalMap
 import FullMarkedBLP.MarkTraceIdentification
-import FullMarkedBLP.RankCutoffBounds
 
 namespace FullMarkedBLP
 

@@ -1,6 +1,4 @@
 import FullMarkedBLP.NativeTargetSourceRank
-import FullMarkedBLP.NativeBottomSat
-import FullMarkedBLP.NativeSourceTrace
 
 namespace FullMarkedBLP
 

@@ -1,5 +1,4 @@
 import FullMarkedBLP.CopyFrozenRealization
-import FullMarkedBLP.FrozenPrefixInduction
 
 namespace FullMarkedBLP
 

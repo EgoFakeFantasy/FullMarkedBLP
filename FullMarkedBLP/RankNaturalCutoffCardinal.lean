@@ -1,5 +1,4 @@
 import FullMarkedBLP.RankCardinalPreservation
-import FullMarkedBLP.RankWordMinimum
 import FullMarkedBLP.RankCriticalLimit
 
 namespace FullMarkedBLP
