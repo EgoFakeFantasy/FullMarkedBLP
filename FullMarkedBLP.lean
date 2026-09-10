@@ -1,6 +1,5 @@
 import FullMarkedBLP.FrozenDirectPacket
 import FullMarkedBLP.NativeSaturatedRealization
-import FullMarkedBLP.RankRowCut
 import FullMarkedBLP.ScanWordBirthPacket
 import FullMarkedBLP.ScanOriginalCoverage
 import FullMarkedBLP.ScanEntryPacketTransfer

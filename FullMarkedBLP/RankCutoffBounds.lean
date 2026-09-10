@@ -1,4 +1,4 @@
-import FullMarkedBLP.RankRowRealization
+import FullMarkedBLP.RankMarkedRealization
 
 namespace FullMarkedBLP
 
