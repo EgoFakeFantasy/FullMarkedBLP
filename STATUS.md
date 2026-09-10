@@ -15,13 +15,21 @@ the repository is a prototype reference, not the source of the missing notes.
 
 ## Current verified state (2026-09-10)
 
-Full build: 1500 jobs. Compiled-environment audit: 4165 theorem constants,
+Full build: 1500 jobs. Compiled-environment audit: 4067 theorem constants,
 including compiler-generated helpers. Only propext, Classical.choice and
 Quot.sound occur. No source proof holes, unsafe declarations or custom axioms.
 The latest build has no errors or internal PANIC diagnostics.
 `CheckMainTheorem.lean` also passes: it checks the final statement against
 the literal `Generated` subtype and the expanded two-level list key.
 Evidence: build-latest.txt, audit-latest.txt, main-theorem-check.txt.
+
+## Completed proof-preserving simplification
+
+Tracked Lean source: 33,501 to 32,502 lines; 999 lines saved.
+All 1,796 original source declarations and 320 additional data declarations
+retain their types, universe parameters and non-theorem definitions, with
+five explicit existential-theorem name migrations. No new linter warnings.
+See REFACTORING.md and SEMANTIC_REVIEW.md for accepted steps and boundaries.
 
 ## Completed proof layers
 

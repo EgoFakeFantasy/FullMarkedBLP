@@ -1,108 +1,8 @@
-ℹ [3/354] Replayed FullMarkedBLP.TraceLemmas
-info: FullMarkedBLP/TraceLemmas.lean:31:0: 'FullMarkedBLP.trace_unique' depends on axioms: [propext]
-info: FullMarkedBLP/TraceLemmas.lean:32:0: 'FullMarkedBLP.trace_last' depends on axioms: [propext]
-info: FullMarkedBLP/TraceLemmas.lean:33:0: 'FullMarkedBLP.start_mark_trace' depends on axioms: [propext, Quot.sound]
-ℹ [4/354] Replayed FullMarkedBLP.Root
-info: FullMarkedBLP/Root.lean:43:0: 'FullMarkedBLP.start_core_valid' depends on axioms: [propext, Quot.sound]
-info: FullMarkedBLP/Root.lean:44:0: 'FullMarkedBLP.start_proper_marks' depends on axioms: [propext, Quot.sound]
-info: FullMarkedBLP/Root.lean:45:0: 'FullMarkedBLP.start_sat' depends on axioms: [propext, Quot.sound]
-ℹ [5/354] Replayed FullMarkedBLP.Copy
-info: FullMarkedBLP/Copy.lean:62:0: 'FullMarkedBLP.copyEntry_zero_source' depends on axioms: [propext, Quot.sound]
-info: FullMarkedBLP/Copy.lean:63:0: 'FullMarkedBLP.auxiliary_copy_entry' depends on axioms: [propext, Quot.sound]
-ℹ [6/354] Replayed FullMarkedBLP.TraceCompute
-info: FullMarkedBLP/TraceCompute.lean:86:0: 'FullMarkedBLP.predecessor_lt' depends on axioms: [propext, Quot.sound]
-info: FullMarkedBLP/TraceCompute.lean:87:0: 'FullMarkedBLP.traceFuel_sound' depends on axioms: [propext]
-info: FullMarkedBLP/TraceCompute.lean:88:0: 'FullMarkedBLP.traceFuel_complete' depends on axioms: [propext]
-info: FullMarkedBLP/TraceCompute.lean:123:0: 'FullMarkedBLP.computeTrace_iff' depends on axioms: [propext, Quot.sound]
-ℹ [7/354] Replayed FullMarkedBLP.MarkedCopy
-info: FullMarkedBLP/MarkedCopy.lean:56:0: 'FullMarkedBLP.start_shortCopy' depends on axioms: [propext]
-ℹ [8/354] Replayed FullMarkedBLP.Expansion
-info: FullMarkedBLP/Expansion.lean:64:0: 'FullMarkedBLP.expandFrom_prefix' depends on axioms: [propext, Quot.sound]
-ℹ [9/354] Replayed FullMarkedBLP.Native
-info: FullMarkedBLP/Native.lean:95:0: 'FullMarkedBLP.native_source_lt' depends on axioms: [propext, Quot.sound]
-ℹ [10/354] Replayed FullMarkedBLP.Scan
-info: FullMarkedBLP/Scan.lean:80:0: 'FullMarkedBLP.start_mStar' depends on axioms: [propext]
-ℹ [11/354] Replayed FullMarkedBLP.ScanTermination
-info: FullMarkedBLP/ScanTermination.lean:79:0: 'FullMarkedBLP.native_length' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/ScanTermination.lean:80:0: 'FullMarkedBLP.scan_remaining_decreases' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/ScanTermination.lean:133:0: 'FullMarkedBLP.fullScan_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [12/354] Replayed FullMarkedBLP.NativeTermination
-info: FullMarkedBLP/NativeTermination.lean:85:0: 'FullMarkedBLP.nativeSources_total' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [13/354] Replayed FullMarkedBLP.Sat
-info: FullMarkedBLP/Sat.lean:62:0: 'FullMarkedBLP.sat_native_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/Sat.lean:88:0: 'FullMarkedBLP.sat_fullScan_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [14/354] Replayed FullMarkedBLP.MarkTrace
-info: FullMarkedBLP/MarkTrace.lean:40:0: 'FullMarkedBLP.computeMarkTrace_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/MarkTrace.lean:41:0: 'FullMarkedBLP.computeMarkTrace_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [15/354] Replayed FullMarkedBLP.Columns
-info: FullMarkedBLP/Columns.lean:77:0: 'FullMarkedBLP.canonicalColumns_sorted' depends on axioms: [propext, Quot.sound]
-info: FullMarkedBLP/Columns.lean:78:0: 'FullMarkedBLP.mem_canonicalColumns' depends on axioms: [propext]
-ℹ [16/354] Replayed FullMarkedBLP.NativeGeometry
-info: FullMarkedBLP/NativeGeometry.lean:62:0: 'FullMarkedBLP.nativeTop_marks_in_core' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeGeometry.lean:63:0: 'FullMarkedBLP.nativeTop_marks_before_owner' depends on axioms: [propext, Quot.sound]
-ℹ [17/354] Replayed FullMarkedBLP.NativeSources
-info: FullMarkedBLP/NativeSources.lean:74:0: 'FullMarkedBLP.nativeSources_decreasing' depends on axioms: [propext, Quot.sound]
-info: FullMarkedBLP/NativeSources.lean:125:0: 'FullMarkedBLP.nativeSources_disjoint' depends on axioms: [propext, Quot.sound]
-ℹ [18/354] Replayed FullMarkedBLP.NativeCounting
-info: FullMarkedBLP/NativeCounting.lean:63:0: 'FullMarkedBLP.nativeTop_length' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeCounting.lean:124:0: 'FullMarkedBLP.nativeTop_actual_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [19/354] Replayed FullMarkedBLP.NativeLower
-info: FullMarkedBLP/NativeLower.lean:80:0: 'FullMarkedBLP.nativeLower_short_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeLower.lean:81:0: 'FullMarkedBLP.nativeLower_medium_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeLower.lean:140:0: 'FullMarkedBLP.nativeLower_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeLower.lean:167:0: 'FullMarkedBLP.nativeTop_actual_coreValid' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [20/354] Replayed FullMarkedBLP.NativePositions
-info: FullMarkedBLP/NativePositions.lean:59:0: 'FullMarkedBLP.nativeLower_short_coreValid' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativePositions.lean:105:0: 'FullMarkedBLP.source_spacing' depends on axioms: [propext, Quot.sound]
-ℹ [21/354] Replayed FullMarkedBLP.NativeBlock
-info: FullMarkedBLP/NativeBlock.lean:44:0: 'FullMarkedBLP.nativeBlockDown_short_total' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeBlock.lean:84:0: 'FullMarkedBLP.nativeBlockDown_medium_total' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [22/354] Replayed FullMarkedBLP.NativeBlockActual
-info: FullMarkedBLP/NativeBlockActual.lean:80:0: 'FullMarkedBLP.nativeBlock_actual_total' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeBlockActual.lean:94:0: 'FullMarkedBLP.native_total' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [23/354] Replayed FullMarkedBLP.Shift
-info: FullMarkedBLP/Shift.lean:33:0: 'FullMarkedBLP.row_shift_coreValid' depends on axioms: [propext, Quot.sound]
-info: FullMarkedBLP/Shift.lean:34:0: 'FullMarkedBLP.row_shift_properMarks' depends on axioms: [propext, Quot.sound]
-ℹ [24/354] Replayed FullMarkedBLP.NativeClosure
-info: FullMarkedBLP/NativeClosure.lean:81:0: 'FullMarkedBLP.native_preserves_coreValid' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [25/354] Replayed FullMarkedBLP.NativeMarks
-info: FullMarkedBLP/NativeMarks.lean:57:0: 'FullMarkedBLP.nativeLower_medium_proper' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeMarks.lean:92:0: 'FullMarkedBLP.nativeLower_short_proper' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeMarks.lean:130:0: 'FullMarkedBLP.target_position_iff_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [26/354] Replayed FullMarkedBLP.NativeTopMarks
-info: FullMarkedBLP/NativeTopMarks.lean:46:0: 'FullMarkedBLP.nativeSources_before_marks' depends on axioms: [propext, Quot.sound]
-info: FullMarkedBLP/NativeTopMarks.lean:110:0: 'FullMarkedBLP.nativeTop_old_mark_position' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeTopMarks.lean:160:0: 'FullMarkedBLP.nativeTop_actual_properMarks' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [27/354] Replayed FullMarkedBLP.NativeBlockMarks
-info: FullMarkedBLP/NativeBlockMarks.lean:79:0: 'FullMarkedBLP.nativeBlockDown_medium_marks' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [28/354] Replayed FullMarkedBLP.NativeMarksActual
-info: FullMarkedBLP/NativeMarksActual.lean:60:0: 'FullMarkedBLP.nativeBlock_actual_marks' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [29/354] Replayed FullMarkedBLP.NativeProperClosure
-info: FullMarkedBLP/NativeProperClosure.lean:82:0: 'FullMarkedBLP.native_preserves_properMarks' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [30/354] Replayed FullMarkedBLP.TraceTransport
-info: FullMarkedBLP/TraceTransport.lean:64:0: 'FullMarkedBLP.native_prefix_markTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/TraceTransport.lean:91:0: 'FullMarkedBLP.shifted_row_p' depends on axioms: [propext]
-ℹ [31/354] Replayed FullMarkedBLP.NativePredecessor
-info: FullMarkedBLP/NativePredecessor.lean:58:0: 'FullMarkedBLP.nativeLower_p' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativePredecessor.lean:112:0: 'FullMarkedBLP.nativeBlockDown_short_p' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativePredecessor.lean:159:0: 'FullMarkedBLP.nativeBlockDown_medium_p' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [32/354] Replayed FullMarkedBLP.NativeRank
-info: FullMarkedBLP/NativeRank.lean:60:0: 'FullMarkedBLP.nativeTop_rank_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeRank.lean:108:0: 'FullMarkedBLP.nativeTop_old_p_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [33/354] Replayed FullMarkedBLP.NativePActual
-info: FullMarkedBLP/NativePActual.lean:76:0: 'FullMarkedBLP.nativeBlock_bottom_p' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [43/354] Replayed FullMarkedBLP.NativeBlockTraces
-info: FullMarkedBLP/NativeBlockTraces.lean:82:0: 'FullMarkedBLP.nativeBlockDown_medium_traces' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [44/354] Replayed FullMarkedBLP.NativeTracesActual
-info: FullMarkedBLP/NativeTracesActual.lean:67:0: 'FullMarkedBLP.nativeBlock_actual_traces' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [62/354] Replayed FullMarkedBLP.CompletionSourceBounds
+⚠ [499/957] Replayed FullMarkedBLP.CompletionSourceBounds
 warning: FullMarkedBLP/CompletionSourceBounds.lean:70:27: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-ℹ [94/354] Replayed FullMarkedBLP.NativeBlockEndpoint
-info: FullMarkedBLP/NativeBlockEndpoint.lean:46:0: 'FullMarkedBLP.nativeBlockDown_short_e' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: FullMarkedBLP/NativeBlockEndpoint.lean:93:0: 'FullMarkedBLP.nativeBlockDown_medium_e' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [1178/1500] Replayed FullMarkedBLP.CompletionSemanticIntervals
+⚠ [1217/1500] Replayed FullMarkedBLP.CompletionSemanticIntervals
 warning: FullMarkedBLP/CompletionSemanticIntervals.lean:71:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -139,11 +39,11 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: FullMarkedBLP/CompletionSemanticIntervals.lean:76:69: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [1238/1500] Replayed FullMarkedBLP.RankGraphFormula
+⚠ [1239/1500] Replayed FullMarkedBLP.RankGraphFormula
 warning: FullMarkedBLP/RankGraphFormula.lean:30:2: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [1240/1500] Replayed FullMarkedBLP.RankFunctionFormula
+⚠ [1241/1500] Replayed FullMarkedBLP.RankFunctionFormula
 warning: FullMarkedBLP/RankFunctionFormula.lean:34:79: This simp argument is unused:
   BoundedFormula.realize_imp
 
@@ -171,10 +71,8 @@ Hint: Omit it from the simp argument list.
       rankMemAt_realize, rankGraphAppliesAt_realize, rankIsFunction, Fin.snoc]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [1357/1500] Replayed FullMarkedBLP.FrozenEligibility
+⚠ [1310/1500] Replayed FullMarkedBLP.FrozenEligibility
 warning: FullMarkedBLP/FrozenEligibility.lean:14:66: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-✔ [1494/1500] Built FullMarkedBLP.CopyShortKey (4.6s)
-✔ [1499/1500] Built FullMarkedBLP (5.6s)
 Build completed successfully (1500 jobs).

@@ -1,0 +1,30 @@
+{
+  "verified_code_commit": "2f3ee70283901ee402965a30db9f2239645e2d79",
+  "baseline_commit": "b006cc075da934bb0cd8506d990f781c10ba6a8a",
+  "baseline": {
+    "lines": 33501,
+    "nonblank": 30205,
+    "bytes": 1729193
+  },
+  "final": {
+    "files": 514,
+    "lines": 32502,
+    "nonblank": 29269,
+    "bytes": 1692418
+  },
+  "saved_lines": 999,
+  "build_jobs": 1500,
+  "audited_theorems": 4067,
+  "declaration_comparison": {
+    "checked_source_declarations": 1796,
+    "checked_additional_data_declarations": 320,
+    "checked_semantic_objects": 2116,
+    "differences": []
+  },
+  "all_modules_in_default_import_closure": true,
+  "warnings": {
+    "baseline_warnings": 18,
+    "current_warnings": 18,
+    "new_warning_messages": []
+  }
+}

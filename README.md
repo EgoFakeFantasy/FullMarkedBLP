@@ -62,18 +62,33 @@ lake env lean Audit.lean
 `lean-toolchain` 固定 Lean 版本，`lake-manifest.json` 固定全部依赖提交。
 本机 `.lake` 缓存不随源码上传。GitHub Actions 使用
 [Lean 官方 lean-action](https://github.com/leanprover/lean-action) 构建项目，
-并再次运行最终定理检查与公理依赖审计。
+并扫描证明缺口、运行最终定理检查与公理依赖审计。
 
 2026-09-10 验收结果：
 
 - 全量构建通过：1500 项。
 - `CheckMainTheorem.lean` 通过：将生成域、短键与可达关系展开后核对最终类型。
-- 编译环境审计通过：4165 个定理常量，包含编译器生成的辅助定理。
+- 编译环境审计通过：4067 个定理常量，包含编译器生成的辅助定理。
 - 公理依赖仅为 Lean 标准的 `propext`、`Classical.choice`、`Quot.sound`。
-- 源码中没有 `sorry`、`admit`、`unsafe` 或自定义 `axiom`；构建没有错误或 PANIC。
+- 源码中没有 `sorry`、`admit`、`unsafe`、`native_decide` 或自定义 `axiom` / `constant`；构建没有错误或 PANIC。
 
 核验记录：[build-latest.txt](build-latest.txt)、[audit-latest.txt](audit-latest.txt)、
 [main-theorem-check.txt](main-theorem-check.txt)。
+
+## 证明保持精简
+
+原始发布提交 `b006cc0` 的 514 个 Lean 文件共 33,501 行。
+本轮完成后为 32,502 行，净减 999 行（2.98%）；
+非空行从 30,205 减至 29,269，净减 936 行。
+统计仅包含版本控制中的 Lean 源码，不包含依赖、缓存和外部候选文件。
+
+公共事件组装、native 几何事实、精确端点推论和行实现分层代替重复证明；
+保留原有数学声明及解释性接口。五个存在定理按命名规范整体迁移。
+与原版对照的 2,116 个语义对象，包括类型、宇宙参数和非定理定义体，均保持一致；
+原有结构字段与最终定理前提也在检查范围内。原有 18 条提示没有增加。
+
+逐轮减行和验收见 [REFACTORING.md](REFACTORING.md)，代换依据与保留理由见
+[SEMANTIC_REVIEW.md](SEMANTIC_REVIEW.md)，命名迁移见 [ProofNaming.md](ProofNaming.md)。
 
 ## 精确范围
 
