@@ -91,20 +91,11 @@ theorem nativeBlock_bottom_geometry {a : Pattern}
       bottom.core.head? = row.core.head? := by
   have hv := valid r row hr
   have eligible := nativeSources_nonempty_eligible hr source nonempty
-  have step : 2 ≤ row.step := by
-    by_cases one : row.step = 1
-    · exact False.elim (nonempty (Option.some.inj
-        (source.symm.trans (nativeSources_step_one_empty hv hr one))))
-    · have := hv.2.2.2.1; omega
+  have step := nativeSources_nonempty_step_ge_two hv hr source nonempty
   have topValid := nativeTop_actual_coreValid valid hr source
   have topLen := nativeTop_actual_length valid hr source
   have topStep : (nativeTop row r sources).step = row.step + sources.length := rfl
-  have targets : ∀ y, r ≤ y → y ≤ r + sources.length → y ∈ (nativeTop row r sources).core := by
-    intro y hy hy'
-    apply (nativeTop_core_mem row r sources y).mpr
-    by_cases eq : y = r
-    · subst y; exact Or.inl (List.mem_of_getLast? hv.2.2.1)
-    · exact Or.inr (Or.inr ⟨by omega, hy'⟩)
+  have targets := nativeTop_contains_targets hv sources
   have headEq : (nativeTop row r sources).core.head? = row.core.head? := by
     cases hm : row.core.head? with
     | none =>
@@ -125,12 +116,7 @@ theorem nativeBlock_bottom_geometry {a : Pattern}
       refine ⟨bottom, entry, bottomValid, ?_, ?_, minimumEq.trans headEq⟩
       · simp only [if_pos medium]; simp only [List.length_cons] at topStep; omega
       · simp only [if_pos medium]; simp only [List.length_cons] at topLen; omega
-  · have short : row.core.length + 1 = 2 * row.step := by
-      have shape := hv.2.2.2
-      rcases shape with ⟨_, h | h | h⟩ <;> omega
-    have minStep : 3 ≤ row.step := by
-      have shape := hv.2.2.2
-      rcases shape with ⟨_, h | h | h⟩ <;> omega
+  · obtain ⟨short, minStep⟩ := Row.short_shape_of_eligible_ne_medium hv.2.2.2 eligible medium
     have down : nativeBlockDown sources.length (r + sources.length) false
         (nativeTop row r sources) = some block := by
       have hbool : (row.core.length == 2 * row.step) = false := by simp [medium]

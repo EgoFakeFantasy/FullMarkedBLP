@@ -41,11 +41,8 @@ theorem shortCopy_native_birth_initial_packet {lambda : Ordinal.{u}} {parent cop
     simpa only [predecessor, atMid, hr, Option.bind_some, hp] using eq
   have midE := completeFrozenMarks_preserves_e historyValid
     (scanEmbeddingReach_forget (scanRankReach_embeddings reach)) currentReal hr he events atMid
-  have step : 1 < mid.step := by
-    by_cases one : mid.step = 1
-    · have empty := nativeSources_step_one_empty (valid r mid atMid) atMid one
-      exact False.elim (nonempty (Option.some.inj (source.symm.trans empty)))
-    · have := (valid r mid atMid).2.2.2.1; omega
+  have step : 1 < mid.step :=
+    nativeSources_nonempty_step_ge_two (valid r mid atMid) atMid source nonempty
   have endpointBelow := fromRight_lt_last (valid r mid atMid).1 (valid r mid atMid).2.2.1 step midE
   obtain ⟨w, currentB, cap⟩ := shortCopy_scan_owner_endpoint_cap parentValid sat copy reach entryReal
     currentReal verified hr hp he eligible record

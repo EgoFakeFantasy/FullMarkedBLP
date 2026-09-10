@@ -58,13 +58,7 @@ theorem native_block_bottom_b_bound {a : Pattern}
   have hmem := nativeBlock_nonempty_core_subset hne hblock hbottom newB (List.mem_of_getElem? hnewidx)
   rcases (nativeTop_core_mem row r sources newB).mp hmem with hold | hsource | htarget
   · exact core_entry_le_b hv hb hold hnewlt
-  · have hstep : 1 < row.step := by
-      by_cases heq : row.step = 1
-      · have hempty := nativeSources_step_one_empty hv hr heq
-        have heq' := Option.some.inj (hsrc.symm.trans hempty)
-        exact False.elim (hne heq')
-      · have hpositive := hv.2.2.2.1
-        omega
+  · have hstep : 1 < row.step := nativeSources_nonempty_step_ge_two hv hr hsrc hne
     have hroom := Row.step_lt_length hv.2.2.2
     obtain ⟨p, hp⟩ := fromRight_exists (xs := row.core) (k := row.step + 1) (by omega) (by omega)
     obtain ⟨e, he⟩ := fromRight_exists (xs := row.core) (k := row.step) (by omega) (by omega)

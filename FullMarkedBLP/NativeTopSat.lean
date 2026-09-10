@@ -84,14 +84,7 @@ theorem native_top_sat_witness {a b : Pattern}
     ∃ er, rowAt b e = some er ∧ er.b = some head := by
   obtain ⟨er, her, hb⟩ := nativeSources_head_b hr hp he hsrc
   have hv := valid r row hr
-  have hstep : 1 < row.step := by
-    have hs := nativeSources_step_one_empty hv hr
-    by_cases h1 : row.step = 1
-    · have hempty := hs h1
-      rw [hsrc] at hempty
-      simp at hempty
-    · have hh := hv.2.2.2.1
-      omega
+  have hstep : 1 < row.step := nativeSources_nonempty_step_ge_two hv hr hsrc (by simp)
   have herlt := fromRight_lt_last hv.1 hv.2.2.1 hstep he
   exact ⟨nativeTop_p_head valid hr hp he hsrc, nativeTop_e valid hr hp he hsrc,
     er, (native_prefix_rowAt hn herlt).trans her, hb⟩

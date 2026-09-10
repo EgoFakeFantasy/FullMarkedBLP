@@ -14,11 +14,7 @@ theorem nativeBlock_bottom_high_entry {a : Pattern}
   have hv := valid r row hr
   have room := Row.step_lt_length hv.2.2.2
   have eligible := nativeSources_nonempty_eligible hr source nonempty
-  have step : 2 ≤ row.step := by
-    by_cases one : row.step = 1
-    · exact False.elim (nonempty (Option.some.inj
-        (source.symm.trans (nativeSources_step_one_empty hv hr one))))
-    · have := hv.2.2.2.1; omega
+  have step := nativeSources_nonempty_step_ge_two hv hr source nonempty
   obtain ⟨p, hp⟩ := fromRight_exists (xs := row.core) (k := row.step + 1) (by omega) (by omega)
   obtain ⟨e, he⟩ := fromRight_exists (xs := row.core) (k := row.step) (by omega) (by omega)
   have eEntry : row.core[row.core.length - row.step]? = some e := by
@@ -39,12 +35,7 @@ theorem nativeBlock_bottom_high_entry {a : Pattern}
     simpa only [rank] using sorted_get_at_rank (nativeTop_sorted row r sources).1 mem
   have topValid := nativeTop_actual_coreValid valid hr source
   have topLen := nativeTop_actual_length valid hr source
-  have targets : ∀ y, r ≤ y → y ≤ r + sources.length → y ∈ (nativeTop row r sources).core := by
-    intro y hy hy'
-    apply (nativeTop_core_mem row r sources y).mpr
-    by_cases eq : y = r
-    · subst y; exact Or.inl (List.mem_of_getLast? hv.2.2.1)
-    · exact Or.inr (Or.inr ⟨by omega, hy'⟩)
+  have targets := nativeTop_contains_targets hv sources
   by_cases medium : row.core.length = 2 * row.step
   · simp only [if_pos medium]
     cases sources with
@@ -57,12 +48,7 @@ theorem nativeBlock_bottom_high_entry {a : Pattern}
         (by simpa only [List.length_cons, Nat.add_assoc, Nat.add_comm 1 ss.length] using topEntry) below
       simpa [nativeBlock, medium] using run
   · simp only [if_neg medium, Nat.add_zero]
-    have short : row.core.length + 1 = 2 * row.step := by
-      have shape := hv.2.2.2
-      rcases shape with ⟨_, h | h | h⟩ <;> omega
-    have minStep : 3 ≤ row.step := by
-      have shape := hv.2.2.2
-      rcases shape with ⟨_, h | h | h⟩ <;> omega
+    obtain ⟨short, minStep⟩ := Row.short_shape_of_eligible_ne_medium hv.2.2.2 eligible medium
     apply nativeBlockDown_short_bottom_high_entry sources.length topValid
       (by change _ = 2 * (row.step + sources.length); omega)
       (by change _ ≤ row.step + sources.length; omega) targets

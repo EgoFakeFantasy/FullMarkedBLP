@@ -14,11 +14,7 @@ theorem nativeBlock_bottom_contains_b {a : Pattern}
   have hv := valid r row hr
   have room := Row.step_lt_length hv.2.2.2
   have eligible := nativeSources_nonempty_eligible hr source nonempty
-  have step : 2 ≤ row.step := by
-    by_cases one : row.step = 1
-    · have empty := nativeSources_step_one_empty hv hr one
-      exact False.elim (nonempty (Option.some.inj (source.symm.trans empty)))
-    · have := hv.2.2.2.1; omega
+  have step := nativeSources_nonempty_step_ge_two hv hr source nonempty
   obtain ⟨p, hp⟩ := fromRight_exists (xs := row.core) (k := row.step + 1) (by omega) (by omega)
   obtain ⟨e, he⟩ := fromRight_exists (xs := row.core) (k := row.step) (by omega) (by omega)
   have elt := fromRight_lt_last hv.1 hv.2.2.1 (by omega : 1 < row.step) he
@@ -43,12 +39,7 @@ theorem nativeBlock_bottom_contains_b {a : Pattern}
     simpa only [rank] using sorted_get_at_rank (nativeTop_sorted row r sources).1 mem
   have topValid := nativeTop_actual_coreValid valid hr source
   have topLen := nativeTop_actual_length valid hr source
-  have targets : ∀ x, r ≤ x → x ≤ r + sources.length → x ∈ (nativeTop row r sources).core := by
-    intro x hx hx'
-    apply (nativeTop_core_mem row r sources x).mpr
-    by_cases eq : x = r
-    · subst x; exact Or.inl (List.mem_of_getLast? hv.2.2.1)
-    · exact Or.inr (Or.inr ⟨by omega, hx'⟩)
+  have targets := nativeTop_contains_targets hv sources
   have retained : ∃ i : Nat, (block[0]?).bind (fun bottom => bottom.core[i]?) = some v := by
     by_cases medium : row.core.length = 2 * row.step
     · cases sources with
@@ -61,12 +52,7 @@ theorem nativeBlock_bottom_contains_b {a : Pattern}
           (by change row.step + (s :: ss).length ≤ _; simp; omega)
           (by simpa only [show row.core.length - 2 + (s :: ss).length = row.core.length - 1 + ss.length by simp only [List.length_cons]; omega] using topEntry) vlt
         simpa [nativeBlock, medium] using run
-    · have short : row.core.length + 1 = 2 * row.step := by
-        have shape := hv.2.2.2
-        rcases shape with ⟨_, h | h | h⟩ <;> omega
-      have minStep : 3 ≤ row.step := by
-        have shape := hv.2.2.2
-        rcases shape with ⟨_, h | h | h⟩ <;> omega
+    · obtain ⟨short, minStep⟩ := Row.short_shape_of_eligible_ne_medium hv.2.2.2 eligible medium
       refine ⟨row.core.length - 2, ?_⟩
       apply nativeBlockDown_short_bottom_high_entry sources.length topValid
         (by change _ = 2 * (row.step + sources.length); omega)
