@@ -82,6 +82,4 @@ theorem nativeSources_total {a : Pattern}
     obtain ⟨ss, hh⟩ := nativeSourcesFuel_total valid p (e + 1) e hepos (by omega) (by omega)
     exact ⟨ss, by simp [nativeSources, hr, hlong, Row.p, Row.e, hp, he, hh]⟩
 
-#print axioms nativeSources_total
 end FullMarkedBLP
-

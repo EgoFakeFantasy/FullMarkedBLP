@@ -57,5 +57,4 @@ theorem nativeBlock_actual_marks {a : Pattern}
       exact ⟨block, by simpa [nativeBlock, hbool] using hb, hvalid⟩
 
 
-#print axioms nativeBlock_actual_marks
 end FullMarkedBLP

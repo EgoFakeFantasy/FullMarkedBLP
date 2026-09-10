@@ -59,11 +59,6 @@ theorem completeFrozenMarks_empty (a : Pattern) (r : Nat) :
     | nil => rfl
     | cons y ys ih => exact ih
 
-#print axioms sat_native_identity
-
-
-
-
 
 /-- With empty records, scanning a Sat pattern is literally stationary. -/
 theorem sat_scan_identity {a : Pattern} (hs : Sat a) (fuel : Nat) :
@@ -85,6 +80,4 @@ theorem sat_scan_identity {a : Pattern} (hs : Sat a) (fuel : Nat) :
 theorem sat_fullScan_identity {a : Pattern} (hs : Sat a) : fullScan a = some a :=
   sat_scan_identity hs a.length 1 (by decide) (by omega)
 
-#print axioms sat_fullScan_identity
 end FullMarkedBLP
-

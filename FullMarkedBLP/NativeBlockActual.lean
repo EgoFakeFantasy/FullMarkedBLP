@@ -77,10 +77,6 @@ theorem nativeBlock_actual_total {a : Pattern}
         (by change _ ≤ row.step + (s :: ss).length; omega) ht
       exact ⟨block, by simpa [nativeBlock, hbool] using hb, hvalid⟩
 
-#print axioms nativeBlock_actual_total
-
-
-
 
 theorem native_total {a : Pattern}
     (valid : ∀ r row, rowAt a r = some row → row.CoreValid r)
@@ -91,5 +87,4 @@ theorem native_total {a : Pattern}
   refine ⟨a.take (r - 1) ++ block ++ (a.drop r).map (Row.shiftAfter r sources.length), sources, ?_⟩
   simp [native, hr, hs, hb]
 
-#print axioms native_total
 end FullMarkedBLP

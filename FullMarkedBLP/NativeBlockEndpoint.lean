@@ -43,9 +43,6 @@ theorem nativeBlockDown_short_e (k : Nat) {base startIndex : Nat} {top : Row} {b
       have hi : top.core.length - top.step = startIndex + (k + 1) + 1 := by omega
       simp [heLen, Row.e, fromRight, show 0 < top.step by omega, hi, show top.step ≤ top.core.length by omega]
 
-#print axioms nativeBlockDown_short_e
-
-
 
 theorem nativeBlockDown_medium_e (k : Nat) {base startIndex : Nat} {top : Row} {block : Pattern}
     (hv : top.CoreValid (base + (k + 1)))
@@ -90,7 +87,6 @@ theorem nativeBlockDown_medium_e (k : Nat) {base startIndex : Nat} {top : Row} {
     have hi : top.core.length - top.step = startIndex + (k + 1) + 1 := by omega
     simp [heLen, Row.e, fromRight, show 0 < top.step by omega, hi, show top.step ≤ top.core.length by omega]
 
-#print axioms nativeBlockDown_medium_e
 
 theorem nativeBlock_actual_e {a : Pattern}
     (valid : ∀ r row, rowAt a r = some row → row.CoreValid r)
@@ -176,5 +172,3 @@ theorem nativeBlock_source_e {a : Pattern}
     List.getElem?_eq_getElem hi, Option.bind_some, ← hadj] using hsource
 
 end FullMarkedBLP
-
-

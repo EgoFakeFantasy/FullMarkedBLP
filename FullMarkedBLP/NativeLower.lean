@@ -77,13 +77,6 @@ theorem nativeLower_medium_shape {row lower : Row} {owner : Nat}
   simp only [Row.OrdinaryShape, List.length_erase_of_mem hm]
   omega
 
-#print axioms nativeLower_short_shape
-#print axioms nativeLower_medium_shape
-
-
-
-
-
 
 theorem sorted_last_of_max {xs : List Nat} {m : Nat}
     (hs : xs.Pairwise (· < ·)) (hm : m ∈ xs) (hb : ∀ x ∈ xs, x ≤ m) :
@@ -137,9 +130,6 @@ theorem nativeLower_endpoint {row lower : Row} {owner source : Nat}
     have hb := core_entry_le_owner hv hh.2
     omega
 
-#print axioms nativeLower_endpoint
-
-
 
 /-- The actual native top has the correct endpoint as well as ordinary shape. -/
 theorem nativeTop_actual_coreValid {a : Pattern}
@@ -164,5 +154,4 @@ theorem nativeTop_actual_coreValid {a : Pattern}
       · have := nativeSources_below_owner valid hr h x hx; omega
       · exact hx.2
 
-#print axioms nativeTop_actual_coreValid
 end FullMarkedBLP

@@ -59,7 +59,4 @@ theorem auxiliary_copy_entry (a n x : Nat) (ha : 0 < a)
   · rename_i h
     simp [Nat.le_of_not_gt h]
 
-#print axioms copyEntry_zero_source
-#print axioms auxiliary_copy_entry
 end FullMarkedBLP
-

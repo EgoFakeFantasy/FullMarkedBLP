@@ -61,9 +61,6 @@ theorem native_prefix_markTrace {a b : Pattern}
   rw [native_prefix_rowAt hn ho]
   exact hr
 
-#print axioms native_prefix_markTrace
-
-
 
 theorem fromRight_map (f : Nat → Nat) (xs : List Nat) (k : Nat) :
     fromRight (xs.map f) k = (fromRight xs k).map f := by
@@ -88,5 +85,4 @@ theorem prefix_rowAt {a b : Pattern} (hp : a <+: b) {i : Nat} (hi : i ≤ a.leng
   · have hh : i - 1 < a.length := by omega
     simp [rowAt, hz, List.getElem?_append_left hh]
 
-#print axioms shifted_row_p
 end FullMarkedBLP

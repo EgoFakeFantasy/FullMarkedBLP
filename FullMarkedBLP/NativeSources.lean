@@ -71,9 +71,6 @@ theorem nativeSources_decreasing {a : Pattern}
     obtain ⟨e, _, h⟩ := Option.bind_eq_some_iff.mp h
     exact nativeSourcesFuel_decreasing valid h
 
-#print axioms nativeSources_decreasing
-
-
 
 theorem between_adjacent_not_mem {xs : List Nat} (hs : xs.Pairwise (· < ·))
     {i p e x : Nat} (hp : xs[i]? = some p) (he : xs[i + 1]? = some e)
@@ -122,5 +119,4 @@ theorem nativeSources_disjoint {a : Pattern}
     have hb := nativeSourcesFuel_bounds valid h x hx
     exact between_adjacent_not_mem hv.1 hpi hei hb.1 hb.2
 
-#print axioms nativeSources_disjoint
 end FullMarkedBLP

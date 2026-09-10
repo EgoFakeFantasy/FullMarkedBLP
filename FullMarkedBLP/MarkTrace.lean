@@ -37,7 +37,4 @@ theorem computeMarkTrace_complete {a : Pattern}
   have hc := (computeTrace_iff valid).mpr ht
   simp [computeMarkTrace, hr, hf, Nat.not_lt.mpr hle, hs, hc]
 
-#print axioms computeMarkTrace_sound
-#print axioms computeMarkTrace_complete
 end FullMarkedBLP
-

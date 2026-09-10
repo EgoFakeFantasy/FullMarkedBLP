@@ -83,11 +83,6 @@ theorem traceFuel_complete {a : Pattern} {s y : Nat} {xs : List Nat}
       have hh := ih fuel (by simpa using hf)
       simp [traceFuel, Nat.ne_of_gt hlt, hlt, hp, hh]
 
-#print axioms predecessor_lt
-#print axioms traceFuel_sound
-#print axioms traceFuel_complete
-
-
 
 theorem trace_length_bound {a : Pattern}
     (valid : ∀ r row, rowAt a r = some row → row.CoreValid r)
@@ -120,5 +115,4 @@ def computeMarkTrace (a : Pattern) (owner y : Nat) : Option (List Nat) := do
     let source ← row.core[k - row.step]?
     computeTrace a source y
 
-#print axioms computeTrace_iff
 end FullMarkedBLP

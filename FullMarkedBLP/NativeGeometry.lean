@@ -59,8 +59,4 @@ theorem completeMarkRow_sorted (row : Row) (y : Nat) (sources : List Nat) :
     (completeMarkRow row y sources).marks.Pairwise (· < ·) :=
   ⟨canonicalColumns_sorted _, canonicalColumns_sorted _⟩
 
-#print axioms nativeTop_marks_in_core
-#print axioms nativeTop_marks_before_owner
 end FullMarkedBLP
-
-

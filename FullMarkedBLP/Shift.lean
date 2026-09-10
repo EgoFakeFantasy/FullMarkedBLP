@@ -30,7 +30,4 @@ theorem row_shift_properMarks {row : Row} {owner r t : Nat}
   refine ⟨shiftAfter_strict r t hb, k, hk, ?_⟩
   simp [Row.shiftAfter, he]
 
-#print axioms row_shift_coreValid
-#print axioms row_shift_properMarks
 end FullMarkedBLP
-

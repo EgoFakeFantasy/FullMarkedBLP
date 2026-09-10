@@ -41,9 +41,6 @@ theorem nativeBlockDown_short_total (k : Nat) {base : Nat} {top : Row}
         subst i
         simpa [heLen, Nat.add_assoc] using hv
 
-#print axioms nativeBlockDown_short_total
-
-
 
 /-- The medium exception is performed once, then the remaining block is short. -/
 theorem nativeBlockDown_medium_total (k : Nat) {base : Nat} {top : Row}
@@ -81,5 +78,4 @@ theorem nativeBlockDown_medium_total (k : Nat) {base : Nat} {top : Row}
       subst i
       simpa [heLen, Nat.add_assoc] using hv
 
-#print axioms nativeBlockDown_medium_total
 end FullMarkedBLP

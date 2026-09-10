@@ -77,7 +77,5 @@ theorem start_mStar : mStar start = some firstChild := by decide
 theorem firstChild_generated : Generated firstChild :=
   Generated.child Generated.root (Step.marked start_mStar)
 
-#print axioms start_mStar
 
 end FullMarkedBLP
-

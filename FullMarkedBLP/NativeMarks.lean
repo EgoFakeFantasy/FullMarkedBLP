@@ -54,9 +54,6 @@ theorem nativeLower_medium_proper {row lower : Row} {owner : Nat}
   refine ⟨by omega, k, hk, ?_⟩
   exact erase_greater_preserves_index hv.1 he hb
 
-#print axioms nativeLower_medium_proper
-
-
 
 /-- In a short row the e-source precedes every proper step-target position. -/
 theorem short_source_before_mark {row : Row} {owner source y : Nat}
@@ -88,10 +85,6 @@ theorem nativeLower_short_proper {row lower : Row} {owner : Nat}
   have ho := erase_greater_preserves_index hv.1 hky hb
   obtain ⟨j, hj, hje⟩ := erase_index_bound ho (Nat.ne_of_gt hs)
   exact ⟨by omega, j, by change row.step - 1 ≤ j; omega, hje⟩
-
-#print axioms nativeLower_short_proper
-
-
 
 
 /-- A target index is exactly the number of core entries strictly below it. -/
@@ -127,5 +120,4 @@ theorem target_position_iff_rank {row : Row} (hs : row.core.Pairwise (· < ·))
     obtain ⟨k, he⟩ := List.mem_iff_getElem?.mp hy
     exact ⟨k, by simpa [sorted_rank_at_index hs he] using h, he⟩
 
-#print axioms target_position_iff_rank
 end FullMarkedBLP

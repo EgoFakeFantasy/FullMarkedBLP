@@ -60,9 +60,6 @@ theorem nativeTop_length {row : Row} {r : Nat} {sources : List Nat}
   simp only [List.length_append, List.length_map, List.length_range]
   omega
 
-#print axioms nativeTop_length
-
-
 
 theorem core_entry_le_owner {row : Row} {r x : Nat}
     (hv : row.CoreValid r) (hx : x ∈ row.core) : x ≤ r := by
@@ -121,7 +118,4 @@ theorem nativeTop_actual_shape {a : Pattern}
   rw [hstep]
   rcases hs with ⟨hp, h | h | h⟩ <;> omega
 
-#print axioms nativeTop_actual_shape
 end FullMarkedBLP
-
-

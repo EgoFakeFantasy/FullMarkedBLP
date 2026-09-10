@@ -76,5 +76,4 @@ theorem nativeBlockDown_medium_marks (k : Nat) {base : Nat} {top : Row}
       subst i
       simpa [heLen, Nat.add_assoc] using hmarks
 
-#print axioms nativeBlockDown_medium_marks
 end FullMarkedBLP

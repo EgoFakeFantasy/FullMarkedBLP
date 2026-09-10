@@ -28,8 +28,5 @@ theorem trace_last {a : Pattern} {s y : Nat} {xs : List Nat}
     | stop => exact ih
     | next _ _ _ => exact ih
 
-#print axioms trace_unique
-#print axioms trace_last
-#print axioms start_mark_trace
 
 end FullMarkedBLP

@@ -64,7 +64,4 @@ theorem nativeBlock_actual_traces {a b : Pattern}
       exact ⟨block, by simpa [nativeBlock, hbool] using hb, hvalid⟩
 
 
-#print axioms nativeBlock_actual_traces
 end FullMarkedBLP
-
-

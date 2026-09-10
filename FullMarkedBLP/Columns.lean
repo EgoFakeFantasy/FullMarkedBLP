@@ -74,7 +74,4 @@ theorem canonicalColumns_idempotent (xs : List Nat) :
     canonicalColumns (canonicalColumns xs) = canonicalColumns xs :=
   canonicalColumns_of_sorted (canonicalColumns_sorted xs)
 
-#print axioms canonicalColumns_sorted
-#print axioms mem_canonicalColumns
 end FullMarkedBLP
-

@@ -76,10 +76,6 @@ theorem scan_remaining_decreases {a b : Pattern} {rec : Records} {r : Nat}
   rw [completeFrozenMarks_length] at hl
   omega
 
-#print axioms native_length
-#print axioms scan_remaining_decreases
-
-
 
 /-- Unbudgeted finite execution, used to prove the implementation bound exact. -/
 inductive ScanRun : Pattern → Records → Nat → Pattern → Prop
@@ -130,5 +126,4 @@ theorem fullScan_iff {a result : Pattern} :
   · intro h
     exact scanFuel_complete h _ (by omega)
 
-#print axioms fullScan_iff
 end FullMarkedBLP

@@ -61,5 +61,4 @@ theorem expandFrom_prefix {anchor : Nat} {initial b : Pattern} {k : Nat}
     obtain ⟨previous, hp, hb⟩ := Option.bind_eq_some_iff.mp h
     exact (ih hp).trans (auxiliaryStep_prefix hb)
 
-#print axioms expandFrom_prefix
 end FullMarkedBLP

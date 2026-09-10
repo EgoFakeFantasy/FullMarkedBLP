@@ -79,6 +79,4 @@ theorem nativeBlockDown_medium_traces (k : Nat) {a : Pattern} {base : Nat} {top 
       subst i
       simpa [heLen, Nat.add_assoc] using htraces
 
-#print axioms nativeBlockDown_medium_traces
 end FullMarkedBLP
-

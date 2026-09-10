@@ -79,7 +79,4 @@ theorem native_preserves_properMarks {a b : Pattern}
       omega
     simpa only [hidx] using ht
 
-#print axioms native_preserves_properMarks
 end FullMarkedBLP
-
-

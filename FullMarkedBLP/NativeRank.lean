@@ -57,9 +57,6 @@ theorem sorted_get_at_rank {xs : List Nat} (hs : xs.Pairwise (· < ·))
   rw [sorted_rank_at_index hs hi]
   exact hi
 
-#print axioms nativeTop_rank_exact
-
-
 
 theorem nativeSources_above_p {a : Pattern}
     (valid : ∀ r row, rowAt a r = some row → row.CoreValid r)
@@ -105,5 +102,4 @@ theorem nativeTop_old_p_entry {a : Pattern}
   simp only [hfilter, List.length_nil, Nat.add_zero, sorted_rank_at_index hv.1 hi] at hrank
   simpa only [hrank] using hget
 
-#print axioms nativeTop_old_p_entry
 end FullMarkedBLP

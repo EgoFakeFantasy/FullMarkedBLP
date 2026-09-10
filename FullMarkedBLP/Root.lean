@@ -40,9 +40,5 @@ theorem start_sat : Sat start := by
   · simp at helig
   · exact ⟨3, 4, ⟨[0, 1, 2, 3, 4], 2, [3]⟩, 3, by decide⟩
 
-#print axioms start_core_valid
-#print axioms start_proper_marks
-#print axioms start_sat
 
 end FullMarkedBLP
-

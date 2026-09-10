@@ -78,6 +78,4 @@ theorem native_preserves_coreValid {a b : Pattern}
       omega
     simpa only [hidx] using ht
 
-#print axioms native_preserves_coreValid
 end FullMarkedBLP
-

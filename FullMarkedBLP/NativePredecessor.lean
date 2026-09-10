@@ -55,9 +55,6 @@ theorem nativeLower_p {row lower : Row} {owner p : Nat} {medium : Bool}
     have hi : lower.core.length - (lower.step + 1) = row.core.length - (row.step + 2) := by omega
     simpa [Row.p, fromRight, hb, hi] using hread
 
-#print axioms nativeLower_p
-
-
 
 theorem nativeLower_keeps_low_index {row lower : Row} {owner i : Nat} {medium : Bool}
     (hv : row.CoreValid owner) (hi : i < row.core.length - row.step)
@@ -109,9 +106,6 @@ theorem nativeBlockDown_short_p (k : Nat) {base startIndex : Nat} {top : Row} {b
       have hi : top.core.length - (top.step + 1) = startIndex + (k + 1) := by omega
       simp [heLen, Row.p, fromRight, hi, show top.step + 1 ≤ top.core.length by omega]
 
-#print axioms nativeBlockDown_short_p
-
-
 
 theorem nativeBlockDown_medium_p (k : Nat) {base startIndex : Nat} {top : Row} {block : Pattern}
     (hv : top.CoreValid (base + (k + 1)))
@@ -156,6 +150,4 @@ theorem nativeBlockDown_medium_p (k : Nat) {base startIndex : Nat} {top : Row} {
     have hi : top.core.length - (top.step + 1) = startIndex + (k + 1) := by omega
     simp [heLen, Row.p, fromRight, hi, show top.step + 1 ≤ top.core.length by omega]
 
-#print axioms nativeBlockDown_medium_p
 end FullMarkedBLP
-

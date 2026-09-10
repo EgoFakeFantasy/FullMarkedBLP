@@ -43,9 +43,6 @@ theorem nativeSources_before_marks {a : Pattern}
     have hm' := eligible_source_le_mark (valid r row hr) hm (by omega) he hy
     omega
 
-#print axioms nativeSources_before_marks
-
-
 
 /-- A duplicate-free subcollection cannot be longer than its containing list. -/
 theorem nodup_subset_length {xs ys : List Nat} (hn : xs.Nodup)
@@ -107,9 +104,6 @@ theorem nativeTop_old_mark_position {a : Pattern}
   change row.step + sources.length ≤ _
   omega
 
-#print axioms nativeTop_old_mark_position
-
-
 
 theorem nativeTop_new_mark_position {a : Pattern}
     (valid : ∀ r row, rowAt a r = some row → row.CoreValid r)
@@ -157,5 +151,4 @@ theorem nativeTop_actual_properMarks {a : Pattern}
   · exact nativeTop_old_mark_position valid hr hm h hold
   · exact nativeTop_new_mark_position valid hr h (by omega) hym
 
-#print axioms nativeTop_actual_properMarks
 end FullMarkedBLP

@@ -92,6 +92,4 @@ def native (a : Pattern) (r : Nat) : Option (Pattern × List Nat) := do
   pure (a.take (r - 1) ++ block ++
     (a.drop r).map (Row.shiftAfter r sources.length), sources)
 
-#print axioms native_source_lt
 end FullMarkedBLP
-

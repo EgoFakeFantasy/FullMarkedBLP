@@ -56,9 +56,6 @@ theorem nativeLower_short_coreValid {row lower : Row} {owner : Nat}
   · exact nativeLower_endpoint hv hm he
       (source_below_previous_owner hv hm ho (by omega) he) h
 
-#print axioms nativeLower_short_coreValid
-
-
 
 theorem sorted_index_spacing {xs : List Nat} (hs : xs.Pairwise (· < ·))
     (i d : Nat) (hi : i < xs.length) (hd : i + d < xs.length) :
@@ -102,6 +99,4 @@ theorem nativeLower_preserves_targets {row lower : Row} {base k : Nat}
   apply (List.mem_erase_of_ne (by omega)).mpr
   exact (List.mem_erase_of_ne (by omega)).mpr (htarget x hx (by omega))
 
-#print axioms source_spacing
 end FullMarkedBLP
-

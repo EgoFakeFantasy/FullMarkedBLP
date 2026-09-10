@@ -53,5 +53,4 @@ theorem start_shortCopy : shortCopy start = some
     (zero ++ [⟨[0, 1, 2, 3], 2, []⟩,
       ⟨[0, 1, 2, 3, 4], 2, [3]⟩, ⟨[0, 1, 4, 5], 2, []⟩]) := by decide
 
-#print axioms start_shortCopy
 end FullMarkedBLP

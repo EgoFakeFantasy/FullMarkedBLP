@@ -73,5 +73,4 @@ theorem nativeBlock_bottom_p {a : Pattern}
     have hhead : block.head? = some block[0] := by simp [List.head?_eq_getElem?, hi]
     simpa [hhead, he] using hh
 
-#print axioms nativeBlock_bottom_p
 end FullMarkedBLP
