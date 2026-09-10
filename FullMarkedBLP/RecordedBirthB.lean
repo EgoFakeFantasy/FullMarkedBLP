@@ -1,5 +1,5 @@
 import FullMarkedBLP.ScanStepEndpointBound
-import FullMarkedBLP.ScanRecordBirthPrefix
+import FullMarkedBLP.RecordedBirthBExact
 
 namespace FullMarkedBLP
 
@@ -25,17 +25,8 @@ theorem scanReach_record_birth_b_bound {lambda : Ordinal.{u}}
       (∀ i, i ≤ terminal + sources.length → rowAt a i = rowAt after i) ∧
       w ≤ v + if v ∈ row.marks then
         ((completionRecord before history terminal v).getD []).length else 0 := by
-  obtain ⟨before, after, history, oldReach, bound, birth, unchanged⟩ :=
-    scanReach_record_origin_prefix reach member
-  have earlier := scanReach_record_targets_before reach member
-  obtain ⟨theta, embedding, h, events⟩ := prior before history terminal oldReach (by omega)
-  have positive := ((scanReach_records_before reach).2 (terminal, sources) member).1
-  obtain ⟨row, hr⟩ := rowAt_exists positive bound
-  obtain ⟨v, hv⟩ := fromRight_exists (xs := row.core) (k := 2) (by decide)
-    (h.valid terminal row hr).2.1
-  have atBirth : rowAt after terminal = some bottom :=
-    (unchanged terminal (by omega)).symm.trans atBottom
-  exact ⟨before, after, history, row, v, oldReach, hr, hv, birth, unchanged,
-    scan_step_bottom_b_bound h hr hv (events row hr) birth atBirth bottomB⟩
+  obtain ⟨before, after, history, row, v, origin, atRow, value, birth, unchanged, exactValue⟩ :=
+    scanReach_record_birth_b_exact reach prior member atBottom bottomB
+  exact ⟨before, after, history, row, v, origin, atRow, value, birth, unchanged, exactValue.le⟩
 
 end FullMarkedBLP
