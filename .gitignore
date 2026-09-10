@@ -1,0 +1,20 @@
+# Lake dependencies and build products are reconstructed from the manifest.
+/.lake/
+*.olean
+*.ilean
+*.olean.private
+*.olean.server
+
+# Retain the final acceptance evidence; omit intermediate development logs.
+/*.txt
+!/audit-latest.txt
+!/build-latest.txt
+!/main-theorem-check.txt
+
+# The standalone final checks are the supported public verification entrypoints.
+/Check*.lean
+!/CheckMainTheorem.lean
+/Scratch*.lean
+
+.DS_Store
+Thumbs.db

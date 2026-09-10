@@ -1,0 +1,5 @@
+'FullMarkedBLP.rankI2_full_marked_blp_natural_cutoff_wellorder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FullMarkedBLP.rankI2_full_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FullMarkedBLP.step_shortKey_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
