@@ -130,9 +130,7 @@ theorem nativeBlockDown_medium_p (k : Nat) {base startIndex : Nat} {top : Row} {
     rw [hout]; exact List.length_erase_of_mem ho
   have hstep' : lower.step = top.step := by rw [hout]
   have hv' : lower.CoreValid (base + k) := by
-    refine ⟨nativeLower_sorted hv.1 hl, by omega, ?_, hs.1⟩
-    rw [hout]
-    simpa [hprev] using erase_owner_last hv hm (by omega)
+    simpa only [hprev] using nativeLower_medium_coreValid hv hm (by omega) (by omega) hlen hl
   have ht' : ∀ x, base ≤ x → x ≤ base + k → x ∈ lower.core := by
     intro x hx hb
     rw [hout]

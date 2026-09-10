@@ -22,9 +22,7 @@ theorem nativeBlockDown_medium_targets (k : Nat) {base : Nat} {top : Row} {block
   have hlen' : lower.core.length = top.core.length - 1 := List.length_erase_of_mem ho
   have hstep' : lower.step = top.step := rfl
   have hv' : lower.CoreValid (base + k) := by
-    refine ⟨nativeLower_sorted hv.1 hl, by omega, ?_, hs.1⟩
-    change (top.core.erase _).getLast? = some _
-    simpa [hprev] using erase_owner_last hv hm (by omega)
+    simpa only [hprev] using nativeLower_medium_coreValid hv hm (by omega) (by omega) hlen hl
   have ht' : ∀ x, base ≤ x → x ≤ base + k → x ∈ lower.core := by
     intro x hx hb
     exact (List.mem_erase_of_ne (by omega)).mpr (htarget x hx (by omega))

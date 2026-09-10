@@ -57,6 +57,20 @@ theorem nativeLower_short_coreValid {row lower : Row} {owner : Nat}
       (source_below_previous_owner hv hm ho (by omega) he) h
 
 
+/-- In the medium descent only the owner is erased. If its predecessor
+remains, the lowered row has the required endpoint and ordinary core shape. -/
+theorem nativeLower_medium_coreValid {row lower : Row} {owner : Nat}
+    (hValid : row.CoreValid owner) (hPrevious : owner - 1 ∈ row.core)
+    (hOwner : 0 < owner) (hStep : 3 ≤ row.step) (hLength : row.core.length = 2 * row.step)
+    (hLower : nativeLower row owner true = some lower) : lower.CoreValid (owner - 1) := by
+  have ownerMem := List.mem_of_getLast? hValid.2.2.1
+  have shape := nativeLower_medium_shape ownerMem hStep hLength hLower
+  cases Option.some.inj hLower
+  refine ⟨hValid.1.sublist List.erase_sublist, ?_, erase_owner_last hValid hPrevious hOwner, shape.1⟩
+  have length := List.length_erase_of_mem ownerMem
+  change 2 ≤ (row.core.erase owner).length
+  omega
+
 theorem sorted_index_spacing {xs : List Nat} (hs : xs.Pairwise (· < ·))
     (i d : Nat) (hi : i < xs.length) (hd : i + d < xs.length) :
     xs[i] + d ≤ xs[i + d] := by

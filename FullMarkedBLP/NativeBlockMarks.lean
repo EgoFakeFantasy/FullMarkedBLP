@@ -54,12 +54,7 @@ theorem nativeBlockDown_medium_marks (k : Nat) {base : Nat} {top : Row}
   have hm : base + (k + 1) - 1 ∈ top.core := htarget _ (by omega) (by omega)
   have hprev : base + (k + 1) - 1 = base + k := by omega
   have hvalid : lower.CoreValid (base + k) := by
-    refine ⟨nativeLower_sorted hv.1 hl, ?_, ?_, hshape.1⟩
-    · change (top.core.erase _).length ≥ 2
-      rw [List.length_erase_of_mem ho]
-      omega
-    · change (top.core.erase _).getLast? = some _
-      simpa [hprev] using erase_owner_last hv hm (by omega)
+    simpa only [hprev] using nativeLower_medium_coreValid hv hm (by omega) (by omega) hlen hl
   have hproper : lower.ProperMarks (base + k) := by
     simpa [hprev] using nativeLower_medium_proper hv hmarks hl
   have ht : ∀ x, base ≤ x → x ≤ base + k → x ∈ lower.core := by

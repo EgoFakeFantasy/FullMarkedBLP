@@ -24,6 +24,38 @@ theorem nativeSources_nonempty_eligible {a : Pattern} {r : Nat} {row : Row}
     contradiction
   · omega
 
+/-- A nonempty source walk rules out step one: at that step the native
+operation has no source to insert. -/
+theorem nativeSources_nonempty_step_ge_two {a : Pattern} {r : Nat} {row : Row}
+    {sources : List Nat} (hValid : row.CoreValid r) (hRow : rowAt a r = some row)
+    (hSources : nativeSources a r = some sources) (hNonempty : sources ≠ []) :
+    2 ≤ row.step := by
+  have positive := hValid.2.2.2.1
+  by_cases one : row.step = 1
+  · exact False.elim (hNonempty (Option.some.inj
+      (hSources.symm.trans (nativeSources_step_one_empty hValid hRow one))))
+  · omega
+
+/-- The native top contains every target from the old owner through the new
+owner; these are the consecutive targets used by each block induction. -/
+theorem nativeTop_contains_targets {row : Row} {r : Nat} (hValid : row.CoreValid r)
+    (sources : List Nat) :
+    ∀ x, r ≤ x → x ≤ r + sources.length → x ∈ (nativeTop row r sources).core := by
+  intro x lower upper
+  apply (nativeTop_core_mem row r sources x).mpr
+  by_cases same : x = r
+  · subst x
+    exact Or.inl (List.mem_of_getLast? hValid.2.2.1)
+  · exact Or.inr (Or.inr ⟨by omega, upper⟩)
+
+/-- For an eligible ordinary row outside the medium case, both the short
+length equation and its minimum step follow from the same shape analysis. -/
+theorem Row.short_shape_of_eligible_ne_medium {row : Row} (hShape : row.OrdinaryShape)
+    (hEligible : row.core.length ≤ 2 * row.step)
+    (hMedium : row.core.length ≠ 2 * row.step) :
+    row.core.length + 1 = 2 * row.step ∧ 3 ≤ row.step := by
+  rcases hShape with ⟨positive, shape | shape | shape⟩ <;> omega
+
 /-- Actual native block is total and every row has its correct indexed core. -/
 theorem nativeBlock_actual_total {a : Pattern}
     (valid : ∀ r row, rowAt a r = some row → row.CoreValid r)
@@ -41,22 +73,10 @@ theorem nativeBlock_actual_total {a : Pattern}
   | cons s ss =>
     have hne : s :: ss ≠ [] := by simp
     have helig := nativeSources_nonempty_eligible hr h hne
-    have hstep : 2 ≤ row.step := by
-      have hp := hv.2.2.2.1
-      by_cases he : row.step = 1
-      · have hh := nativeSources_step_one_empty hv hr he
-        have := Option.some.inj (h.symm.trans hh)
-        contradiction
-      · omega
+    have hstep := nativeSources_nonempty_step_ge_two hv hr h hne
     have htop := nativeTop_actual_coreValid valid hr h
     have htoplen := nativeTop_actual_length valid hr h
-    have ht : ∀ x, r ≤ x → x ≤ r + (s :: ss).length →
-        x ∈ (nativeTop row r (s :: ss)).core := by
-      intro x hx hb
-      apply (nativeTop_core_mem row r (s :: ss) x).mpr
-      by_cases he : x = r
-      · subst x; exact Or.inl (List.mem_of_getLast? hv.2.2.1)
-      · exact Or.inr (Or.inr ⟨by omega, hb⟩)
+    have ht := nativeTop_contains_targets hv (s :: ss)
     by_cases hmedium : row.core.length = 2 * row.step
     · obtain ⟨block, hb, hvalid⟩ := nativeBlockDown_medium_total ss.length htop
         (by change _ = 2 * (row.step + (s :: ss).length); omega)
@@ -64,14 +84,7 @@ theorem nativeBlock_actual_total {a : Pattern}
       exact ⟨block, by simpa [nativeBlock, hmedium] using hb, hvalid⟩
     · have hbool : (row.core.length == 2 * row.step) = false := by
         exact Bool.eq_false_iff.mpr (by simpa using hmedium)
-      have hshort : row.core.length + 1 = 2 * row.step := by
-        have hs := hv.2.2.2
-        unfold Row.OrdinaryShape at hs
-        rcases hs with ⟨hp, hs | hs | hs⟩ <;> omega
-      have hsmin : 3 ≤ row.step := by
-        have hs := hv.2.2.2
-        unfold Row.OrdinaryShape at hs
-        rcases hs with ⟨hp, hs | hs | hs⟩ <;> omega
+      obtain ⟨hshort, hsmin⟩ := Row.short_shape_of_eligible_ne_medium hv.2.2.2 helig hmedium
       obtain ⟨block, hb, hvalid⟩ := nativeBlockDown_short_total (s :: ss).length htop
         (by change _ = 2 * (row.step + (s :: ss).length); omega)
         (by change _ ≤ row.step + (s :: ss).length; omega) ht
