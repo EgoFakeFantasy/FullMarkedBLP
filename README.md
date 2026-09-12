@@ -99,3 +99,9 @@ I2 采用文献中的非平凡 Σ₂ 初等秩嵌入表述，定义于 RankSecon
 起点使用原稿完全相同的五行字面根，并构造足够的真实语义见证；没有把
 原型中的 `g_(11)` 精确数值估计作为结论。详细说明见
 [I2_FOUNDATION.md](I2_FOUNDATION.md) 和 [STATUS.md](STATUS.md)。
+
+## 许可证
+
+Copyright 2026 EgoFakeFantasy.
+
+本项目采用 [Apache License 2.0](LICENSE)。
